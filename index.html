@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<title>Aysha Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: rgb(215, 218, 212);
+  line-height: 1.8;
+  background-color: rgb(16, 4, 51);
+}
+table {
+    border-spacing: 1em .5em;
+  padding: 0 2em 1em 0;
+  width: 100%;
+  border: 1px solid rgb(214, 9, 9);
+}
+h2{
+    text-underline-offset: 0.5em;
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("pho11.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("pho11.png");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("pho1.png");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 5px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+.w3-row-padding img {margin-bottom: 19px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 150px;background: rgb(16, 4, 51);}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 170px}
+img {
+  border-radius: 50%;
+}
+#image1 {
+  width: 100px;
+  height: 100px;
+  background-color:grey;
+  position: relative;
+  animation: myfirst 3s linear 2s infinite alternate;
+}
+
+@keyframes myfirst {
+  0%   {background-color:rgb(80, 77, 77); left:0px; top:0px;}
+  25%  {background-color:rgb(231, 218, 218); left:200px; top:0px;}
+  50%  {background-color:blue; left:0px; top:0px;}
+  75%  {background-color:green; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:0px;}
+
+}
+div.gallery {
+  margin: 8px;
+  border: 3px solid rgb(214, 9, 9);
+  float: left;
+  width: 300px;
+  background-color: gray;
+}
+
+div.gallery:hover {
+  border: 2px solid rgb(32, 29, 29);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 20px;
+  text-align: center;
+}
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2s steps(50) 2s 2 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+</style>
+<body>
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <!--<img src="pho1.png" alt="boy" class="w3-image" width="200" height="100">-->
+    <a style=" color: rgb(255, 0, 0);"href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p style=" color: rgb(255, 0, 0);">HOME</p>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p style=" color: rgb(255, 0, 0);">ABOUT</p>
+    </a>
+    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-eye w3-xxlarge"></i>
+      <p style=" color: rgb(255, 0, 0);">WORKS</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p style=" color: rgb(255, 0, 0);">CONTACT</p>
+    </a>
+  </nav>
+  
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a  style=" color: rgb(255, 0, 0);"href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      <a style=" color: rgb(255, 0, 0);"href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+      <a style=" color: rgb(255, 0, 0);"href="#photos" class="w3-bar-item w3-button" style="width:25% !important">WORKS</a>
+      <a style=" color: rgb(255, 0, 0);"href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    </div>
+  </div>
+  
+   <!-- <div class="w3-top w3-left">
+        <div class="w3-bar" id="myNavbar">
+          <a class="w3-bar-item w3-button w3-hover-red w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+          </a>
+          <a href="#home" style=" color: rgb(255, 0, 0);" class="w3-bar-item w3-button">HOME</a>
+          <a href="#about"  style=" color: rgb(255, 0, 0);" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+          <a href="#portfolio" style=" color: rgb(255, 0, 0);" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> WORKS</a>
+          <a href="#contact" style=" color: rgb(255, 0, 0);" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+          <a href="#" style=" color: rgb(255, 0, 0);" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+      
+        
+        <div id="navDemo" class="w3-bar-block w3-hover-red w3-hide w3-hide-large w3-hide-medium">
+          <a href="#about" style=" color: rgb(255, 0, 0);" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+          <a href="#portfolio"style=" color: rgb(255, 0, 0);"  class="w3-bar-item w3-button" onclick="toggleFunction()">WORKS</a>
+          <a href="#contact" style=" color: rgb(255, 0, 0);" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+          
+        </div>
+      </div>  -->
+<!-- Navbar (sit on top) -->
+
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container " id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <div class="Container">
+    <img src="pho.png" id="image1"  alt="boy"  width="140" height="150"></div>
+   <p class="line-1 anim-typewriter"> <h1 ><b style=" color: rgb(255, 0, 0);">I'm Aysha P</b></h1>
+    <h3 class="w3-text-white">Web Developer</h3></p>
+    
+</div>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h2 class="w3-xxlarge w3-text-white w3-wide" style=" color: rgb(255, 0, 0);"><u>ABOUT ME</u></h2>
+  <br>
+
+ <!-- <p class="w3-center"><em>I love photography</em></p>-->
+  <p>My name is Aysha P. I'm a web developer based in InnoXgen Solutions Pvt.Ltd at India and currently living in Abu Dhabi.
+    I enjoy building Custom websites to help business do better online.With 1 year experience as professional web developer mainly focused on front end development.
+  Graduated B.tech specialized in Information Technology.I have acquired the skills necessary to build great and premium websites.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b style=" color: rgb(255, 0, 0);"><i class="fa fa-user w3-margin-right"></i>Aysha P</b></p><br>
+      <img src="pho1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="150" height="250">
+    </div>
+<br>
+<br>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <table style="box-shadow: 10px 10px grey;">
+          <tr>
+              <td>
+                  <b>Name:</b> Aysha P
+              </td>
+              <td> 
+                  <b>Age:</b> 24</td>
+          </tr>
+          <tr>
+            <td>
+                <b>Phone:</b> +971528248364
+            </td>
+            <td> <b>Address:</b>   Abu Dhabi,UAE</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Email:</b> ayshapulliyil19@gmail.com
+            </td>
+            <td> <b>Visa Status:</b> Spouse Visa</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Experience:</b> 1 year
+            </td>
+            <td> <b>Notice Period:</b> Immediately Available</td>
+        </tr>
+        
+        
+      </table>
+      <br>
+      <button  class="w3-button w3-red w3-padding-large w3-large w3-opacity w3-hover-opacity-off" ><i class="fa fa-download"></i> <a href="/Applications/XAMPP/xamppfiles/htdocs/portfolio/cv.pdf" download>Download CV</a></button>  
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <h2 style=" color: rgb(255, 0, 0);" class="w3-xxlarge w3-text-white w3-wide"><u>MY SKILLS</u></h2>
+  <br>
+  
+  <p class="w3-wide"><i class="fa fa-laptop"></i>HTML</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>CSS</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>javascript</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-language"></i>Bootstrap</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-language"></i>PHP</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-language"></i>Java</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-language"></i>Python</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-language"></i>C, C++</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:60%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-shopping-cart"></i> Shopify, WiX, Webflow</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%"></div>
+  </div>
+  
+</div>
+<!--
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings
+  </div>
+</div>-->
+
+<!-- Second Parallax Image with Portfolio Text 
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>-->
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="photos">
+  <h2 class="w3-xxlarge w3-text-white w3-wide"><u>MY WORK</u></h2>
+  
+  <br>
+  <br> 
+  <div class="gallery" style="box-shadow: 10px 10px black;">
+    <i class="fa fa-laptop" style="font-size:50px ; color:rgb(255, 0, 0); width: 100%; text-align: center;"></i>
+    <div class="desc"><a href="http://shop-now.epizy.com/ecom/"><h3>Front End Development</h3></a>
+        <p>Create an efficient front end website and I enjoy bringing ideas to life in the browser.</p>
+   
+ <p style=" color: rgb(255, 0, 0);" >Languages I speak:</p>  
+ <p >HTML,CSS,JS,Bootstrap</p>
+    </div>
+  </div>
+  
+  <div class="gallery" style="box-shadow: 10px 10px black;">
+    <i class="fa fa-laptop" style="font-size:50px ; color:rgb(255, 0, 0); width: 100%; text-align: center;"></i>
+    <div class="desc"><h3>BackEnd Development</h3>
+        <p>Create an innovative websites to improve quality of website to premium website  </p>
+        <p style=" color: rgb(255, 0, 0);" >Languages I used:</p>  
+ <p>PHP, Java</p>
+   </div>
+  </div>
+  
+  <div class="gallery" style="box-shadow: 10px 10px black;">
+    
+    <i class="fa fa-shopping-cart" style="font-size:35px; color:rgb(255, 0, 0); width: 100%; text-align: center;"></i>
+    <div class="desc"><h3>E-Commerce Web Development</h3>
+      <p>Create an innovative E-Commerce websites.</p>
+        <p style=" color: rgb(255, 0, 0);" >E-Commerce Platform:</p>  
+    <p>Shopify,WiX,Webflow</p>  
+ </div>
+  </div>
+  
+  
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  
+
+   
+   
+  
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+
+  
+     
+  
+
+  
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+    <h2 class="w3-xxlarge w3-text-white w3-wide"><u>CONTACT</u></h2>
+  
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.951700736103!2d54.440315750302844!3d24.417745468794823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4272e074b769%3A0xa3cd912bfbb1a2d0!2sY%20TOWER%20ADNEC!5e0!3m2!1sen!2sae!4v1640246556106!5m2!1sen!2sae" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Abu Dhabi, UAE<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +971 528248364<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ayshapulliyil19@gmail.com<br>
+      </div>
+     <p>leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="email" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://instagram.com/aysha_pulliyil?r=nametag"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/aysha-p-84a512176"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="ayshapulliyil19@gmail.com"> <i class="fa fa-envelope"></i></a>
+  </div>
+  
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+    
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></input></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+</script>
+
+</body>
+</html>
+
