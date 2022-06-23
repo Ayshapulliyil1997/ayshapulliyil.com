@@ -35,6 +35,10 @@ h2{
 .bgimg-1 {
   background-image: url("pho11.jpg");
   min-height: 100%;
+  height: 590px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 /* Second image (Portfolio) */
@@ -61,18 +65,18 @@ h2{
 }
 .w3-row-padding img {margin-bottom: 19px}
 /* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 150px;background: rgb(16, 4, 51);}
+.w3-sidebar {width: 100px;background: rgb(16, 4, 51);}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 170px}
 img {
   border-radius: 50%;
 }
 #image1 {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 170px;
   background-color:grey;
   position: relative;
-  animation: myfirst 3s linear 2s infinite alternate;
+ 
 }
 
 @keyframes myfirst {
@@ -128,13 +132,35 @@ div.desc {
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 24em;}
+  to{width: 13em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+  background-color: rgb(221, 219, 219);
+  color: black;
+  border: 2px solid #555555;
+}
 
+.button5:hover {
+  background-color: #555555;
+  color:rgb(189, 189, 189);
+}
 </style>
 <body>
   <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -150,7 +176,7 @@ div.desc {
     </a>
     <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
       <i class="fa fa-eye w3-xxlarge"></i>
-      <p style=" color: rgb(255, 0, 0);">WORKS</p>
+      <p style=" color: rgb(255, 0, 0);">PROJECTS</p>
     </a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
       <i class="fa fa-envelope w3-xxlarge"></i>
@@ -163,7 +189,7 @@ div.desc {
     <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
       <a  style=" color: rgb(255, 0, 0);"href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
       <a style=" color: rgb(255, 0, 0);"href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-      <a style=" color: rgb(255, 0, 0);"href="#photos" class="w3-bar-item w3-button" style="width:25% !important">WORKS</a>
+      <a style=" color: rgb(255, 0, 0);"href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
       <a style=" color: rgb(255, 0, 0);"href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
     </div>
   </div>
@@ -195,12 +221,12 @@ div.desc {
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container " id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
+ <div class="w3-display-middle" style="white-space:nowrap;">
     <div class="Container">
-    <img src="pho.png" id="image1"  alt="boy"  width="140" height="150"></div>
-   <p class="line-1 anim-typewriter"> <h1 ><b style=" color: rgb(255, 0, 0);">I'm Aysha P</b></h1>
-    <h3 class="w3-text-white">Web Developer</h3></p>
-    
+    <img src="pho.png" id="image1"  alt="boy"  width="190" height="200"></div>
+   <p class="line-1 anim-typewriter" style="text-align:centre;"> <h1 ><b style=" color: rgb(255, 0, 0);">I'm Aysha P</b></h1>
+    </p>
+    <button class="button button5">HIRE ME</button>
 </div>
   </div>
 </div>
@@ -211,9 +237,8 @@ div.desc {
   <br>
 
  <!-- <p class="w3-center"><em>I love photography</em></p>-->
-  <p>My name is Aysha P. I'm a web developer based in InnoXgen Solutions Pvt.Ltd at India and currently living in Abu Dhabi.
-    I enjoy building Custom websites to help business do better online.With 1 year experience as professional web developer mainly focused on front end development.
-  Graduated B.tech specialized in Information Technology.I have acquired the skills necessary to build great and premium websites.</p>
+  <p>My name is Aysha P. I'm from India and currently living in Abu Dhabi.
+    I enjoy building Custom websites to help business do better online. Graduated B.tech specialized in Information Technology.I have acquired the skills necessary to build great and premium websites.<br><q>Looking for opportunities to incorporate my skills and knowledge to to serve the firm to the best of my efforts.</q></p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b style=" color: rgb(255, 0, 0);"><i class="fa fa-user w3-margin-right"></i>Aysha P</b></p><br>
@@ -223,8 +248,8 @@ div.desc {
 <br>
 
     <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <table style="box-shadow: 10px 10px grey;">
+    <div class="w3-col m6  w3-padding-large">
+      <table >
           <tr>
               <td>
                   <b>Name:</b> Aysha P
@@ -245,16 +270,14 @@ div.desc {
             <td> <b>Visa Status:</b> Spouse Visa</td>
         </tr>
         <tr>
-            <td>
-                <b>Experience:</b> 1 year
-            </td>
+            
             <td> <b>Notice Period:</b> Immediately Available</td>
         </tr>
         
         
       </table>
       <br>
-      <button  class="w3-button w3-red w3-padding-large w3-large w3-opacity w3-hover-opacity-off" ><i class="fa fa-download"></i> <a href="/Applications/XAMPP/xamppfiles/htdocs/portfolio/cv.pdf" download>Download CV</a></button>  
+      <button  class="w3-button w3-red w3-padding-large w3-large w3-opacity w3-hover-opacity-off" ><i class="fa fa-download"></i> <a href="Aysha-cv.pdf" download>Download CV</a></button>  
     </div>
   </div>
   
@@ -287,10 +310,7 @@ div.desc {
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%"></div>
   </div>
-  <p class="w3-wide"><i class="fa fa-language"></i>Python</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%"></div>
-  </div>
+ 
   <p class="w3-wide"><i class="fa fa-language"></i>C, C++</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:60%"></div>
@@ -298,6 +318,14 @@ div.desc {
   <p class="w3-wide"><i class="fa fa-shopping-cart"></i> Shopify, WiX, Webflow</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-shopping-cart"></i> React Native</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:30%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-shopping-cart"></i>Angular</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:30%"></div>
   </div>
   
 </div>
@@ -330,7 +358,7 @@ div.desc {
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="photos">
-  <h2 class="w3-xxlarge w3-text-white w3-wide"><u>MY WORK</u></h2>
+  <h2 class="w3-xxlarge w3-text-white w3-wide"><u>MY PROJECTS</u></h2>
   
   <br>
   <br> 
@@ -339,30 +367,31 @@ div.desc {
     <div class="desc"><a href="http://shop-now.epizy.com/ecom/"><h3>Front End Development</h3></a>
         <p>Create an efficient front end website and I enjoy bringing ideas to life in the browser.</p>
    
- <p style=" color: rgb(255, 0, 0);" >Languages I speak:</p>  
+ <p style=" color: rgb(255, 0, 0);" >Languages I Used:</p>  
  <p >HTML,CSS,JS,Bootstrap</p>
+
     </div>
   </div>
   
-  <div class="gallery" style="box-shadow: 10px 10px black;">
-    <i class="fa fa-laptop" style="font-size:50px ; color:rgb(255, 0, 0); width: 100%; text-align: center;"></i>
-    <div class="desc"><h3>BackEnd Development</h3>
-        <p>Create an innovative websites to improve quality of website to premium website  </p>
-        <p style=" color: rgb(255, 0, 0);" >Languages I used:</p>  
- <p>PHP, Java</p>
-   </div>
-  </div>
+  
   
   <div class="gallery" style="box-shadow: 10px 10px black;">
     
     <i class="fa fa-shopping-cart" style="font-size:35px; color:rgb(255, 0, 0); width: 100%; text-align: center;"></i>
-    <div class="desc"><h3>E-Commerce Web Development</h3>
+    <div class="desc"><a href="https://ayshapulliyil19.wixsite.com/my-site"><h3>E-Commerce Web Development</h3></a>
       <p>Create an innovative E-Commerce websites.</p>
         <p style=" color: rgb(255, 0, 0);" >E-Commerce Platform:</p>  
     <p>Shopify,WiX,Webflow</p>  
  </div>
   </div>
-  
+  <div class="gallery" style="box-shadow: 10px 10px black;">
+    <i class="fa fa-laptop" style="font-size:50px ; color:rgb(255, 0, 0); width: 100%; text-align: center;"></i>
+    <div class="desc"><a href="http://studentmanagementaysha.epizy.com/ums/"><h3>BackEnd Development</h3></a>
+        <p>Create an innovative websites to improve quality of website to premium website  </p>
+        <p style=" color: rgb(255, 0, 0);" >Languages I used:</p>  
+ <p>PHP, Java</p>
+   </div>
+  </div>
   
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   
@@ -392,8 +421,6 @@ div.desc {
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
     <h2 class="w3-xxlarge w3-text-white w3-wide"><u>CONTACT</u></h2>
-  
-
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.951700736103!2d54.440315750302844!3d24.417745468794823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4272e074b769%3A0xa3cd912bfbb1a2d0!2sY%20TOWER%20ADNEC!5e0!3m2!1sen!2sae!4v1640246556106!5m2!1sen!2sae" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
@@ -405,7 +432,7 @@ div.desc {
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ayshapulliyil19@gmail.com<br>
       </div>
      <p>leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
+      <form action="mailto:ayshapulliyil19@gmail.com" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
